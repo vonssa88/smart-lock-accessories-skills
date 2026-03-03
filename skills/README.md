@@ -17,6 +17,18 @@
 - 文件：`财务规则制定技能.md`
 - 功能：使用Python脚本生成财务规则制度，包括财务职责、费用报销、资金管理、固定资产管理、财务监督等内容。
 
+### 4. 产品说明书生成工具
+- 文件：`product_manual_generator.py`
+- 功能：使用Python脚本生成产品说明书，支持自定义产品名称、技术参数、安装说明等内容。
+
+### 5. 小红书爆款文案策划工具
+- 文件：`xiaohongshu_copywriter.py`
+- 功能：使用Python脚本生成符合小红书风格的智能门锁配件文案，包括标题、内容和标签。
+
+### 6. 财务规则制定工具
+- 文件：`财务规则制定技能.md`
+- 功能：使用Python脚本生成财务规则制度，包括财务职责、费用报销、资金管理、固定资产管理、财务监督等内容。
+
 ## 使用方法
 1. 阅读技能文件，了解技能的功能和使用方法
 2. 按照技能文件中的说明，调用相应的函数
@@ -26,7 +38,27 @@
 - Python 3.x
 - python-docx（用于生成Word文档）
 
-## 维护说明
-1. 定期更新技能文件，确保技能的正确性和完整性
-2. 根据业务需求，添加新的技能
-3. 对技能进行测试，确保其正常运行
+## 生成Word文档
+```python
+import generate_word_manual
+
+with open('/root/.openclaw/workspace/华宝通智能门锁锂电池说明书.md', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+doc = generate_word_manual.generate_word_manual('华宝通智能门锁锂电池说明书', content)
+doc.save('/root/.openclaw/workspace/华宝通智能门锁锂电池说明书.docx')
+```
+
+## 仓库信息
+- 仓库名称：smart-lock-accessories-skills
+- 仓库地址：https://github.com/vonssa88/smart-lock-accessories-skills
+- 仓库说明：技能和产品说明书
+
+## 已推送的内容
+- 产品说明书生成技能
+- 小红书爆款文案策划技能
+- 财务规则制定技能
+- 华宝通智能门锁锂电池说明书（ZNS-09B）
+- 华宝通智能门锁锂电池说明书（ZNS-09B1）
+
+如果您需要我更新仓库内容，或者有其他需求，请随时告诉我！
